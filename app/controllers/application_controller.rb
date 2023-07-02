@@ -4,6 +4,7 @@ class ApplicationController < ActionController::API
   private
 
   def record_not_found
+    Rails.logger.error e.message
     render json: { error: 'Record not found' }, status: :not_found
   end
 end

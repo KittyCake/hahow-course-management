@@ -20,6 +20,9 @@ class CoursesController < ApplicationController
     else
       render json: @course.errors, status: :unprocessable_entity
     end
+
+  rescue => e
+    render json: e, status: :unprocessable_entity
   end
 
   def update
@@ -30,6 +33,9 @@ class CoursesController < ApplicationController
     else
       render json: @course.errors, status: :unprocessable_entity
     end
+
+  rescue => e
+    render json: e, status: :unprocessable_entity
   end
 
   def destroy
