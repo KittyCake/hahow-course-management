@@ -54,3 +54,5 @@ production:
   database: course_management_production
   username: course_management
   password: <%= ENV["COURSE_MANAGEMENT_DATABASE_PASSWORD"] %>
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
